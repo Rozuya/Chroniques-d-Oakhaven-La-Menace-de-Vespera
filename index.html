@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chroniques d'Oakhaven : La Menace de Vespera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Écran de démarrage / Saisie du nom -->
+        <div id="start-screen" class="screen">
+            <h1>Chroniques d'Oakhaven</h1>
+            <h2>La Menace de Vespera</h2>
+            <p>Entrez le nom de l'héroïne (par défaut Laura) :</p>
+            <input type="text" id="player-name-input" value="Laura" maxlength="15">
+            <button id="start-btn">Commencer l'Aventure</button>
+        </div>
 
+        <!-- Écran de jeu principal -->
+        <div id="game-screen" class="screen hidden">
+            <header id="game-header">
+                <div id="status-bar">
+                    <span id="zone-display">Zone : Oakhaven</span>
+                    <span id="hp-display">PV : 100/100</span>
+                    <span id="gold-display">Or : 50 🪙</span>
+                </div>
+            </header>
+
+            <main id="canvas-container">
+                <canvas id="gameCanvas" width="800" height="450"></canvas>
+            </main>
+
+            <footer id="game-footer">
+                <div id="dialogue-box">
+                    <p id="dialogue-text">Bienvenue à Oakhaven. Utilisez ZQSD ou les flèches pour vous déplacer.</p>
+                    <div id="dialogue-options"></div>
+                </div>
+                <div id="inventory-panel">
+                    <h3>Inventaire</h3>
+                    <ul id="inventory-list">
+                        <!-- Éléments injectés par JS -->
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
